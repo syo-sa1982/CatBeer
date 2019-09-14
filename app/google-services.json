@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "905491505659",
+    "firebase_url": "https://catbeer-5ae80.firebaseio.com",
+    "project_id": "catbeer-5ae80",
+    "storage_bucket": "catbeer-5ae80.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905491505659:android:70ac269ae80210c8",
+        "android_client_info": {
+          "package_name": "com.syousa1982.catbeer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "905491505659-0c1fr0qqkv95tpj4jvapoguk6vrafpuv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.syousa1982.catbeer",
+            "certificate_hash": "8975ae90927f07e109ebb6d426f560846f52b83a"
+          }
+        },
+        {
+          "client_id": "905491505659-jnipk2va6to7l0s9ckc98ggudjtjipqm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8dlGv82cjA6cw7HArScW0LtJ--Fi35AQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "905491505659-jnipk2va6to7l0s9ckc98ggudjtjipqm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
