@@ -13,9 +13,32 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
-        release {
+        debug {
+//            signingConfig signingConfigs.debug
             minifyEnabled false
+            shrinkResources false
+            useProguard false
+        }
+        release {
+//            signingConfig signingConfigs.release
+            minifyEnabled true
+            shrinkResources true
+            useProguard true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // ビルド環境を設定
+    flavorDimensions "default"
+    productFlavors {
+        // 本番環境
+        production {
+            resValue "string", "app_name", "猫Bot"
+            buildConfigField "String", "API_ENDPOINT", '"https://us-central1-catbeer-5ae80.cloudfunctions.net"'
+        }
+        development {
+            resValue "string", "app_name", "猫Bot 開発"
+            buildConfigField "String", "API_ENDPOINT", '"https://us-central1-catbeer-5ae80.cloudfunctions.net"'
         }
     }
     compileOptions {
