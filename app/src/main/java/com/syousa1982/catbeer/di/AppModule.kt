@@ -4,9 +4,13 @@ import android.content.Context
 import com.squareup.moshi.Moshi
 import com.syousa1982.catbeer.BuildConfig
 import com.syousa1982.catbeer.data.api.ChatBotApi
+import com.syousa1982.catbeer.data.repository.ChatBotRepository
+import com.syousa1982.catbeer.data.repository.IChatBotRepository
+import com.syousa1982.catbeer.ui.home.HomeViewModel
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
@@ -14,11 +18,15 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 object AppModule {
     val instance = module {
 
+        viewModel { HomeViewModel(get()) }
+
         // region Data Layer API
         single { NetworkModule.getMoshi() }
         single { NetworkModule.getOkHttpClient(androidContext()) }
         single { NetworkModule.getChatBotApi(get(), get()) }
         // endregion
+
+        single<IChatBotRepository> { ChatBotRepository(get()) }
     }
 }
 
