@@ -1,3 +1,10 @@
+val kotlin_version: String by project
+val coroutines_version by extra("1.3.6") //Kotlin coroutines用ライブラリ(async, await)のバージョン
+val okhttp_version by extra("4.2.0")
+val retrofit_version by extra("2.6.1")
+val moshi_version by extra("1.8.0")
+val koin_version by extra("2.0.0")
+
 plugins {
     id("com.android.application")
     id("kotlin-android")
@@ -55,13 +62,6 @@ android {
         jvmTarget = "1.8"
     }
 }
-
-val kotlin_version = "1.3.72"
-val coroutines_version = "1.3.6" //Kotlin coroutines用ライブラリ(async, await)のバージョン
-val okhttp_version = "4.2.0"
-val retrofit_version = "2.6.1"
-val moshi_version = "1.8.0"
-val koin_version = "2.0.0"
 
 dependencies {
     implementation (fileTree("dir" to "libs", "include" to listOf("*.jar")))
