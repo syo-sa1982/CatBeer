@@ -3,9 +3,9 @@
 buildscript {
     val kotlin_version by extra("1.3.72")
     repositories {
+        mavenLocal()
         google()
         jcenter()
-        
     }
     dependencies {
         classpath("com.android.tools.build:gradle:4.0.0")
@@ -18,9 +18,9 @@ buildscript {
 
 allprojects {
     repositories {
+        mavenLocal()
         google()
         jcenter()
-        
     }
 }
 
